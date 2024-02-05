@@ -46,7 +46,7 @@ Std_ReturnType k_pad_read_number(k_pad_t *k1 , uint8 *num){
     
         for(int coloms = 0 ; coloms < K_PAD_COLOMS ; coloms++ ){
             ret = gpio_pin_read_logic(&(k1->K_PAD_PINS_COLOMS[coloms]),&colom_logic) ;
-            if(colom_logic == 1){*num = kpad[raws][coloms]; __delay_ms(800) ;  }
+            if(colom_logic == 1){*num = kpad[raws][coloms]; __delay_ms(100) ;  }
             __delay_ms(6) ;
         }
     
